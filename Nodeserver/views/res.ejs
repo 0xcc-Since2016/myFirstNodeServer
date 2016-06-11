@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>谭宝宝的电影院</title>
+	<style type="text/css" media="screen">
+	    body{padding: 0px;margin: 0px;background-color: #f5f7f9;overflow: scroll;}
+	    div,ul,li,a,img,h4{margin: 0;padding: 0;}
+	    ul{list-style: none;}
+	    a{text-decoration: none;color: black;}
+		.top{padding: 0px;margin: 0px;background-color:#008ed4;}
+		.top .navbar{padding: 0px;margin: 0px;}
+        .top .navbar .navbar-inner{padding: 0 5px;margin: 0px;}
+        .top .navbar .navbar-inner .container{overflow: hidden;}
+        .top .navbar .navbar-inner .container-left{margin-left:60px;height:60px;line-height: 60px;float: left;color: white;font-size: 20px;}
+        .top .navbar .navbar-inner .container-right{overflow: hidden;}
+        .top .navbar .nav{list-style: none;padding: 0px;margin: 0px;}
+        .top .navbar .nav .navbar-item{display: block;height:60px;line-height: 60px;float: right;padding: 5px 0;margin-right: 2px;}
+        .top .navbar .nav .navbar-item:hover{background-color:#77DAE4;}
+        .top .navbar .nav .navbar-item a{text-decoration: none;color: white;text-align: center;padding: 0 10px;}
+        .top .navbar .nav .navbar-item a:hover{background-color:#77DAE4;}
+        .top .navbar .nav .page{background-color:#77DAE4;}
+
+        .center{width: 982px;margin:0 auto;background-color: white;margin-top: 36px;padding: 20px 0;}
+        .center .movieName{width: 940px;margin:0 auto;background-color:#008ed4; height: 36px;line-height: 36px;}
+        .center .movieName h4{margin-left: 50px;color: white;}
+        .center table{width: 940px;margin:0 auto;margin-bottom: 26px;}
+        .center table tr{text-align: center;height: 36px;}
+        .center table .catelog{background-color:#E8E8E8;}
+        .center table .detail{background-color:#F6F6F6;}
+        .center table .time{font-size: 30px;}
+		.center table .date{font-size: 30px;}
+		.center table .small{font-size: 22px;}
+		.center table .smaller{font-size: 18px;}
+        .checkout-button {display: block;width:80px; height:24px; line-height:20px;margin: 10px auto;border:1px solid #999;font-size: 14px; cursor:pointer;background-color:#008ed4; color: white;}
+        .checkout-button:hover{background-color: #E4AF75;color: black;}
+		}
+		 
+	</style>
+	
+</head>
+<body>
+	<div class="top">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+				    <div class="container-left">
+				    	<span><em>谭宝宝的电影院</em></span>
+				    </div>
+					<div class="container-right">
+						<ul class="nav">
+							<li class="navbar-item">
+								<a href="seaRch">在线购票</a>
+							</li>
+							<li class="navbar-item">
+								<a>招聘</a>
+							</li>
+							<li class="navbar-item">
+								<a>app</a>
+							</li>
+							<li class="navbar-item">
+								<a>活动</a>
+							</li>
+							<li class="navbar-item">
+								<a>影城</a>
+							</li>
+							<li class="navbar-item page">
+								<a href="/">首页</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="search"></div>
+	</div>
+	
+	<div class="center">
+	  <div>
+	  	<div class="movieName"><h4>影片：<%=con.con1.filmname%></h4></div>
+		<table cellspacing="0" cellpadding="0">
+		 <thead>
+		 	 <tr class="catelog">	
+			<td width="100">日期</td>
+			<td width="100">开始时间</td>
+			<td class="typebox" width="120">3D/2D</td>
+			<td class="left" width="120">放映厅</td>
+			<td width="160">座位</td>
+			<td width="120">原价</td>
+			<td width="220">操作</td>
+		  </tr>
+		 </thead>
+         <tbody>
+         	<tr class="detail">
+				<td class="date"><%=con.con1.date%></td>
+				<td class="time"><%=con.con1.time%></td>
+				<td class="small">2D</td>
+				<td class="smaller"><%=con.con1.place%></td>
+				<td class="smaller">共84,剩余<%=con.con1.Sitsleft%></td>
+				<td class="smaller"><%=con.con1.price%>元</td>
+				<td>
+					<a href="picksit?id=1" target="_blank">
+					  <button class="checkout-button">选座购票</button>
+					</a>
+				</td>
+			</tr>
+			<tr class="detail">
+				<td class="date"><%=con.con2.date%></td>
+				<td class="time"><%=con.con2.time%></td>
+				<td class="small">3D</td>
+				<td class="smaller"><%=con.con2.place%></td>
+				<td class="smaller">共84,剩余<%=con.con2.Sitsleft%></td>
+				<td class="smaller"><%=con.con2.price%>元</td>
+				<td>
+					<a href="picksit?id=2" target="_blank">
+					  <button class="checkout-button">选座购票</button>
+					</a>
+				</td>
+			</tr>
+	 </div>
+	    
+	</div>	
+
+</body>
+</html>

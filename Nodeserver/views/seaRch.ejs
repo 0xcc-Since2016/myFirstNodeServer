@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>寻你所爱</title>
+	<style type="text/css" media="screen">
+		 body{padding: 0px;margin: 0px;background-color: #f5f7f9;overflow: scroll;}
+	    div,ul,li,a,img,button,text{margin: 0;padding: 0;}
+	    ul{list-style: none;}
+	    a{text-decoration: none;color: black;}
+
+		.top{padding: 0px;margin: 0px;background-color:#008ed4;}
+		.top .navbar{padding: 0px;margin: 0px;}
+        .top .navbar .navbar-inner{padding: 0 5px;margin: 0px;}
+        .top .navbar .navbar-inner .container{overflow: hidden;}
+        .top .navbar .navbar-inner .container-left{margin-left:60px;height:60px;line-height: 60px;float: left;color: white;font-size: 20px;}
+        .top .navbar .navbar-inner .container-right{overflow: hidden;}
+        .top .navbar .nav{list-style: none;padding: 0px;margin: 0px;}
+        .top .navbar .nav .navbar-item{display: block;height:60px;line-height: 60px;float: right;padding: 5px 0;margin-right: 2px;}
+        .top .navbar .nav .navbar-item:hover{background-color:#77DAE4;}
+        .top .navbar .nav .navbar-item a{text-decoration: none;color: white;text-align: center;padding: 0 10px;}
+        .top .navbar .nav .navbar-item a:hover{background-color:#77DAE4;}
+        .top .navbar .nav .page{background-color:#77DAE4;}
+
+        .center{text-align: center;padding: 0px;margin: 0 auto ;position: relative;width: 800px;margin-top:30px;}
+		.center .text{position:absolute;width: 792px;height:20px;top:0px;left:0px;}
+		.center .btn-search{position:absolute;height: 27px;width: 50px;top:0px;margin:0 auto;cursor: pointer;background-color: #008ed4;right: 0px;}
+		.center .btn-search:hover{background-color: #E4AF75;}
+        .center .btn-search a:hover{color: black;}
+
+		  #imgBlock {width:1170px; overflow:hidden;left:35px;right: 35px;margin:0 auto;margin-top: 100px;}
+		  .contain{float:left;position: relative;width: 195px;height: 307px;text-align: center;margin: 0 3% 5% 0;overflow: hidden;}
+		  .background{float: left;}
+		.detail{position: absolute;width: 195px;left:60px;top:140px;display: none;background-color:#008ed4;width: 70px;height: 30px;}
+		.test{position: absolute;width: 195px;bottom:25px;left:60px;display: none;background-color:#008ed4;width: 70px;height: 30px;z-index: 1001;}
+		.contain a{color: white;height: 30px;line-height: 30px;}
+		.detail:hover,.test:hover{background-color:  #E4AF75;}
+        .detail:hover a,.test:hover a{color: black;}
+        .contain .bg{position:absolute;width:195px; display: none; bottom:0;background-color:#000;height:75px;z-index: 1000;opacity: 0.5}
+		.contain:hover .detail,
+		.contain:hover .test,
+		.contain:hover .bg{
+			display: block;
+	</style>
+
+</head>
+<body>
+	<div class="top">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+				    <div class="container-left">
+				    	<span><em>谭宝宝的电影院</em></span>
+				    </div>
+					<div class="container-right">
+						<ul class="nav">
+							<li class="navbar-item">
+								<a href="seaRch">在线购票</a>
+							</li>
+							<li class="navbar-item">
+								<a>招聘</a>
+							</li>
+							<li class="navbar-item">
+								<a>app</a>
+							</li>
+							<li class="navbar-item">
+								<a>活动</a>
+							</li>
+							<li class="navbar-item">
+								<a>影城</a>
+							</li>
+							<li class="navbar-item page">
+								<a href="/">首页</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="search"></div>
+	</div>
+	<form class = "sContent" role="form" method="post">
+	<div class="center">
+			<input id="text" name="text" type="text" class="text" alt="输入影片名" autofocus="autofocus" autocomplete="off" class="search-combobox-input" aria-haspopup="true" aria-combobox="list" role="combobox" x-webkit-grammar="builtin:translate" tabindex="0"/>
+			<button class="btn-search" type="submit" data-spm-click="gostr=/tbindex;locaid=d13" data-spm-anchor-id="a21bo.50862.201856.d13">搜索</button>
+	</div>
+	</form>
+    <div id="imgBlock">  
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L1.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=1">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=1">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L2.jpeg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=2">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=2">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L3.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=3">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=3">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L4.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=4">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=4">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L5.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=5">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=5">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L6.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=6">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=6">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L7.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=7">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=7">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+	  <div class="contain">
+			<div class="background">
+				<img width="195" height="307" src="imgs/L8.jpg" alt="">
+			</div>
+			<div class="detail">
+				<a href="filmDetail?id=8">详情</a>
+			</div>
+			<div class="test">
+				<a href="bill?id=8">购票</a>
+			</div>
+			<div class="bg"></div>
+	  </div>
+    </div>
+</body>
+</html>

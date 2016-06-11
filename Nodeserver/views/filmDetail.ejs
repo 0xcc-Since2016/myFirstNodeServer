@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>影片详情</title>
+	<style type="text/css" media="screen">
+	    body{margin: 0px;padding:0px;background-color: #f5f7f9;overflow: scroll;background-image:url("bimg/B1.jpg")}
+	    div,ul,li,a,img,h4,span{margin: 0;padding: 0;}
+	     a{text-decoration: none;color: black;}
+	     ul{list-style: none;}
+
+		.top{padding: 0px;margin: 0px;background-color:#008ed4;}
+		.top .navbar{padding: 0px;margin: 0px;}
+        .top .navbar .navbar-inner{padding: 0 5px;margin: 0px;}
+        .top .navbar .navbar-inner .container{overflow: hidden;}
+        .top .navbar .navbar-inner .container-left{margin-left:60px;height:60px;line-height: 60px;float: left;color: white;font-size: 20px;}
+        .top .navbar .navbar-inner .container-right{overflow: hidden;}
+        .top .navbar .nav{list-style: none;padding: 0px;margin: 0px;}
+        .top .navbar .nav .navbar-item{display: block;height:60px;line-height: 60px;float: right;padding: 5px 0;margin-right: 2px;}
+        .top .navbar .nav .navbar-item:hover{background-color:#77DAE4;}
+        .top .navbar .nav .navbar-item a{text-decoration: none;color: white;text-align: center;padding: 0 10px;}
+        .top .navbar .nav .navbar-item a:hover{background-color:#77DAE4;}
+        .top .navbar .nav .page{background-color:#77DAE4;}
+        
+		
+        .content{margin:0 auto;margin-top: 26px;width:1280px;overflow: hidden;height: 540px;padding:26px;}
+        .content .search_video{float: left;display: block;clear: both;margin:0 auto;margin-bottom:10px;width: 1088px;height: 378px;}
+        .content .pic{float: left;display: block;margin:8px;border:5px #eee solid;}
+        .content .pic a:hover{cursor: pointer;}
+        .content .text{float: left;padding: 0px;margin:10px;height: 378px;}
+        .content .text .textAndBtn{width: 754px;height: 66px;overflow: hidden;}
+        .content .text .text1{width: 460px;float: left;}
+        .content .text .btn{float:right;height: 66px;line-height: 66px;width: 116px;background-color:#008ed4;text-align: center;}
+        .content .text .btn a{font-size: 25px;color: white;}
+        .content .text .btn:hover{cursor: pointer;background-color: #E4AF75;}
+        .content .text .btn a:hover{color: black;cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+				    <div class="container-left">
+				    	<span><em>谭宝宝的电影院</em></span>
+				    </div>
+					<div class="container-right">
+						<ul class="nav">
+							<li class="navbar-item">
+								<a href="seaRch">在线购票</a>
+							</li>
+							<li class="navbar-item">
+								<a>招聘</a>
+							</li>
+							<li class="navbar-item">
+								<a>app</a>
+							</li>
+							<li class="navbar-item">
+								<a>活动</a>
+							</li>
+							<li class="navbar-item">
+								<a>影城</a>
+							</li>
+							<li class="navbar-item">
+								<a href="/">首页</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="search"></div>
+	</div>
+
+	<div class="content">
+		<dl class="search_video">
+			<dt class="pic">
+				<a href="" target="_blank" title="">
+				  <%if (content.ID==1) {%>
+				  <img width="212" height="342" src="imgs/L1.jpg">
+				  <%}%>
+				  <%if (content.ID==2) {%>
+				  <img width="212" height="342" src="imgs/L2.jpeg">
+				  <%}%>
+				  <%if (content.ID==3) {%>
+				  <img width="212" height="342" src="imgs/L3.jpg">
+				  <%}%>
+				  <%if (content.ID==4) {%>
+				  <img width="212" height="342" src="imgs/L4.jpg">
+				  <%}%>
+				  <%if (content.ID==5) {%>
+				  <img width="212" height="342" src="imgs/L5.jpg">
+				  <%}%>
+			  	  <%if (content.ID==6) {%>
+				  <img width="212" height="342" src="imgs/L6.jpg">
+				  <%}%>
+				  <%if (content.ID==7) {%>
+				  <img width="212" height="342" src="imgs/L7.jpg">
+				  <%}%>
+				  <%if (content.ID==8) {%>
+				  <img width="212" height="342" src="imgs/L8.jpg">
+				  <%}%>
+				  <em></em>
+				</a>
+			</dt>
+			<dd class="text">
+			    <div class="textAndBtn">
+				     <div class="text1">
+		    <p class="movie__option" style="font-size:14px"><strong>时长: </strong><%=content.time%>分钟</p>
+		<p class="movie__option" style="font-size:14px"><strong>影片名称: </strong><%=content.filmname%></p>
+				     </div>
+
+					<div class="btn">
+					 <%if (content.ID==1) { %>
+				     	<a href="bill?id=1">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==2) { %>
+				     	<a href="bill?id=2">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==3) { %>
+				     	<a href="bill?id=3">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==4) { %>
+				     	<a href="bill?id=4">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==5) { %>
+				     	<a href="bill?id=5">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==6) { %>
+				     	<a href="bill?id=6">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==7) { %>
+				     	<a href="bill?id=7">我要购票</a>
+					 <%}%>
+					 <%if (content.ID==8) { %>
+				     	<a href="bill?id=8">我要购票</a>
+					 <%}%>
+			    </div>
+				</div>
+				<p class="movie__option" style="font-size:14px"><strong>影片格式: </strong>2D</p>
+				<p class="movie__option" style="font-size:14px"><strong>国家地区: </strong>中国</p>
+				<p class="movie__option" style="font-size:14px"><strong>上映日期: </strong>2016-06-01 00:00:00</p>
+				<p class="movie__option" style="font-size:14px"><strong>影片类型: </strong><%=content.type%></p>
+				<p class="movie__option" style="font-size:14px"><strong>导演: </strong><%=content.director%></p>
+				<p class="movie__option" style="font-size:14px"><strong>主演: </strong><%=content.Mactor%></p>
+				<p class="movie__option" style="font-size:14px"><strong>评论: </strong><%=content.descr%></p>
+				<p class="movie__option" style="font-size:14px"><strong>查看次数: </strong><span id="hits"><%=content.Rand%></span></p>
+
+				
+			</dd>
+		</dl>
+	</div>
+
+</body>
+</html>
